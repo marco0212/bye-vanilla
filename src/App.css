@@ -24,7 +24,25 @@ img {
   padding: 15px;
 }
 .swiper-slide {
-  background: no-repeat right center;
+  display: flex;
+  height: 500px;
+  align-items: center;
+}
+.swiper-slide.first {
+  position: relative;
+  background: no-repeat center center / cover;
+}
+.swiper-slide.first p {
+  position: absolute;
+  font-size: 25px;
+  color: #fff;
+  line-height: 1.5;
+  top: 15px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 1), 0px 0px 3px rgba(0, 0, 0, 1), 0px 0px 3px rgba(0, 0, 0, 1);
+  
 }
 .content-wrap {
   display: flex;
