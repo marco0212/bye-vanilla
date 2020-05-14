@@ -52,6 +52,7 @@ img {
 }
 .text-area{
   flex: 1;
+  max-height: 400px;
   padding-left: 50px;
 }
 .img-area {
@@ -66,8 +67,11 @@ img {
   margin-bottom: 30px;
 }
 .text-area p {
+  white-space: pre-wrap;
   font-size: 20px;
   line-height: 1.5;
+  max-height: calc(400px - 125px);
+  overflow-y: scroll;
 }
 @media screen and (max-width: 480px) {
   html, body, #root {
