@@ -2,15 +2,18 @@ import React, { useEffect } from 'react';
 import letters from './letters.json';
 import Swiper from 'swiper';
 import './App.css';
+import groupImg from './pictures/group.png';
+
+const images = require.context('./pictures', true);
 
 function App() {
   useEffect(() => {
     new Swiper ('.swiper-container', {
       speed: 700,
       spaceBetween: 100,
-      autoplay: {
-        delay: 5000,
-      }
+      // autoplay: {
+      //   delay: 5000,
+      // }
     });
   }, []);
   return (
@@ -18,7 +21,7 @@ function App() {
         <div className="swiper-wrapper">
         <div
           className="swiper-slide first"
-          style={{ backgroundImage: `url(https://imgnews.pstatic.net/image/001/2020/05/13/PYH2020051313370001300_P4_20200513175611501.jpg)`}}
+          style={{ backgroundImage: `url(${groupImg})`}}
         >
           <p>
             여기까지 오게 된 것은 모두 켄님 덕분입니다. Special thanks to ken.<br />
@@ -28,11 +31,12 @@ function App() {
           {
             letters.map(letter => {
               const { name, title, text, picture } = letter;
+              const img = images('./' + picture);
               return (
                 <div className="swiper-slide" key={name}>
                   <div className="content-wrap">
                     <div className="img-area">
-                      <img src={picture} alt={name}/>
+                      <img src={img} alt={name}/>
                     </div>
                     <div className="text-area">
                       <h3>{title}</h3>
