@@ -18,6 +18,12 @@ body {
 img {
   vertical-align: top;
 }
+.img-wrap {
+  width: 100%;
+}
+.img-wrap img {
+  width: 100%;
+}
 .swiper-container {
   box-sizing: border-box;
   width: 100%;
@@ -33,19 +39,21 @@ img {
   position: relative;
   background: no-repeat center center / cover;
 }
-.swiper-slide.first p {
+.group {
+  position: relative;
+}
+.group p {
   position: absolute;
-  font-size: 25px;
+  font-size: 20px;
   color: #fff;
   line-height: 1.5;
-  top: 15px;
+  top: 20px;
   left: 0;
   right: 0;
   padding: 0 15px;
   box-sizing: border-box;
   text-align: center;
   text-shadow: 0px 0px 3px rgba(0, 0, 0, 1), 0px 0px 3px rgba(0, 0, 0, 1), 0px 0px 3px rgba(0, 0, 0, 1);
-  
 }
 .content-wrap {
   display: flex;
@@ -79,6 +87,10 @@ img {
 @media screen and (max-width: 480px) {
   html, body, #root {
     height: auto;
+  }
+  .group p {
+    position: relative;
+    margin-top: 15px;
   }
   .content-wrap {
     width: 100%;

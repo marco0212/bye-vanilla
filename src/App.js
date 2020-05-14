@@ -19,14 +19,16 @@ function App() {
   return (
     <div className="swiper-container">
         <div className="swiper-wrapper">
-        <div
-          className="swiper-slide first"
-          style={{ backgroundImage: `url(${groupImg})`}}
-        >
-          <p>
-            여기까지 오게 된 것은 모두 켄님 덕분입니다. Special thanks to ken.<br />
-            2020.01.06 ~ 05.09 바닐라코딩 7기, 스승의 날
-          </p>
+        <div className="swiper-slide">
+          <div className="group">
+            <div className="img-wrap">
+              <img src={groupImg} alt="Bye Vanilla" />
+            </div>
+            <p>
+              여기까지 오게 된 것은 모두 켄님 덕분입니다. Special thanks to ken.<br />
+              2020.01.06 ~ 05.09 바닐라코딩 7기, 스승의 날
+            </p>
+          </div>
         </div>
           {
             letters.map(letter => {
