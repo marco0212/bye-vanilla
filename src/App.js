@@ -11,9 +11,9 @@ function App() {
     new Swiper ('.swiper-container', {
       speed: 700,
       spaceBetween: 100,
-      // autoplay: {
-      //   delay: 5000,
-      // }
+      autoplay: {
+        delay: 5000,
+      }
     });
   }, []);
   return (
